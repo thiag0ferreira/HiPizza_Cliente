@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Meus Favoritos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="fnd">
+    <ion-item>
+      <ion-label class="fnd" style="width: 20%; text-align: center;">
+        <div class="bdegrad">
+          <span style="display: inline-block; width: 50px;">
+            <ion-icon [hidden]="primeiro" name="arrow-back-circle-outline" style="zoom:2.0;" (click)="goVoltar()"></ion-icon>
+          </span>
+          <span style="display: inline-block; width: 150px; cursor: pointer;">
+            <h1 *ngIf="favoritoTela">{{favoritoTela.fantasia}}</h1>
+          </span>
+          <span style="display: inline-block; width: 50px;">
+            <ion-icon [hidden]="!mais" name="arrow-forward-circle-outline" style="zoom:2.0;" (click)="goAdiante()"></ion-icon>
+          </span>
+        </div>
+      </ion-label>
+    </ion-item>
+    <div *ngIf="favoritoTela">
+      <ion-list style="background: url(../../assets/pizza.jpg) no-repeat center center fixed;
+      background-size: cover;
+      height: 100%;
+      color: white;" [ngClass]=" grande ? 'centrar' : 'afastar' " *ngFor="let p of favoritoTela.produtos">
+        <ion-item class="fnd" style="color: black;">
+          <ion-label style="cursor: pointer;background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(19,53,116,0.3867121848739496) 0%, rgba(0,1,255,0.1679446778711485) 100%);" [ngClass]="{ 'centrar': grande }" (click)="abrePede(p.id)">
+            <div>
+              <h2>{{p.descricao}}</h2>
+              <h3>{{p.detalhe}}</h3>
+              <p>{{p.valor}}<ion-icon name="cart-outline" color="dark"></ion-icon>{{p.valPedido}}</p>
+            </div>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>

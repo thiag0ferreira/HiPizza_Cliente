@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edição dados cadastrais</ion-title>
+    <ion-button (click)="closeModal()" slot="end" fill="clear" shape="round">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>{{label}}</ion-label>
+    <ion-input [hidden]="isSexo" [(ngModel)]="tValor" id="tValor" type="text"></ion-input>
+    <ion-list [hidden]="!isSexo">
+      <ion-radio-group name="rSexo" value="tValor">
+        <ion-item>
+          <ion-label>Masculino </ion-label>
+          <ion-radio value="M" (click)="setSex('M')"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Feminino </ion-label>
+          <ion-radio value="F" (click)="setSex('F')"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-chip color="primary" (click)="alteraDados()">
+      <ion-label>Salvar</ion-label>
+      <ion-icon name="checkmark-outline" color="tertiary"></ion-icon>
+    </ion-chip>
+  </ion-item>
+</ion-content>

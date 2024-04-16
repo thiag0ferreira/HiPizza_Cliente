@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Opções especiais</ion-title>
+    <ion-button (click)="closeModal()" slot="end" fill="clear" shape="round">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Opção</ion-label>
+    <ion-select [(ngModel)]="cbOpcoes" value="peperoni" multiple="true" placeholder="Selecione as opões" (change)="mudou()">
+      <ion-select-option *ngFor="let o of opcoes" value="{{o.id}}">{{o.nome}}</ion-select-option>
+    </ion-select>
+    <ion-button color="secondary" (click)="gotOps()" >
+      Ok
+      <ion-icon (click)="gotOps()" name="checkmark"></ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,20 @@
+.centrar {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.afastar {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.bdegrad {
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(19,53,116,0.3867121848739496) 0%, rgba(0,1,255,0.1679446778711485) 100%);
+}
+
+.fnd {
+    background: url(../../assets/pizza.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    color: white;
+}

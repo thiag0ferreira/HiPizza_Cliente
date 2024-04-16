@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar Endereço</ion-title>
+    <ion-button (click)="closeModal()" slot="end" fill="clear" shape="round">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="simple-form">
+  <ion-item>
+    <ion-label>{{label}}</ion-label>
+    <ion-input [hidden]="isTado" [(ngModel)]="tValor" type="text"></ion-input>
+    <ion-select [hidden]="!isTado" [(ngModel)]="tValor" value="{{tValor}}">
+      <ion-select-option *ngFor="let e of estados" value="{{e.sigla}}">{{e.nome}}</ion-select-option>
+    </ion-select>
+    <ion-chip (click)="alteraEnd()" color="primary">
+      <ion-label>Salvar</ion-label>
+      <ion-icon name="checkmark" color="tertiary"></ion-icon>
+    </ion-chip>
+  </ion-item>
+</ion-content>

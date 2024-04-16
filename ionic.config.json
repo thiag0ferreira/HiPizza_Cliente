@@ -1,0 +1,8 @@
+{
+  "name": "hipizza",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pedidos em aberto</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="novoPedido()">
+        <ion-icon slot="icon-only" ios="call-outline" md="add-circle-outline" item-right></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="fnd">
+    <ion-list id="iListaPed" class="fnd">
+      <ion-item *ngFor="let p of pedidos; let last = last;" style="padding-bottom: 10px;">
+        <ion-label class="cantinhos" (click)="abrePed(p.id)" style="cursor: pointer; margin: -.1px;">
+          <h2>{{p.fantasiaEstabelecimento}} - {{p.nomeEstabelecimento}}{{terminou(last)}}</h2>
+          <h3><b>Status: </b>{{p.nomeStatus}}</h3>
+          <p>Total ítens: {{p.itens}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

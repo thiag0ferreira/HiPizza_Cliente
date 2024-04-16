@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Estabelecimentos</ion-title>
+    <ion-chip color="primary" slot="end" (click)="abreStabsFavoritos()">
+      <ion-label>Favoritos</ion-label>
+      <ion-icon name="star" color="#f2d857"></ion-icon>
+    </ion-chip>
+    <ion-chip color="primary" slot="end" (click)="removeDados()">
+      <ion-label>Limpar Dados</ion-label>
+      <ion-icon name="brush-outline"></ion-icon>
+    </ion-chip>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="fnd">
+    <div id="iLista">
+      <ion-list class="fnd" *ngFor = "let s of stbs">
+        <ion-item (click)="verStab(s.st.id)" style="cursor: pointer;margin-left: -12px;
+        margin-right: -16px;
+        margin-bottom: -25px;
+        margin-top: -10px; background-color: white;" lines="none">
+          <ion-label class="cantinhos">
+            <h1 style="color: black;">{{s.st.fantasia}} - {{s.st.razaoSocial}} - {{s.ed.nPeds}} pedidos</h1>
+            <h4 style="color: black;">({{s.st.ddd}}) {{s.st.fone}}</h4>
+            <p>{{s.st.website}}</p> 
+            <p>{{s.ed.logradouro}}, {{s.ed.numero}} {{s.ed.bairro}} {{s.ed.cidade}}-{{s.ed.estado}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+
+</ion-content>

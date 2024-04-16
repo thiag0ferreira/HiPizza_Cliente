@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <h1>{{produto.tipo.nome}}</h1>
+      <h2>{{produto.descricao}}</h2>
+      <h3>{{produto.detalhe}}</h3>
+      <p>{{produto.valor}}</p>
+    </ion-title>
+    <ion-button (click)="closeModal()" slot="end" fill="clear" shape="round">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list id="iListaPP" style="padding-left: 20%; padding-right: 20%;">
+    <ion-label style="padding-right: 50px;"><b>Qtd: </b>{{qtd}}</ion-label>
+    <ion-icon (click)="maisProd()" id="cima" slot="end" name="arrow-up" style="padding-right: 20px;cursor: pointer;"></ion-icon>
+    <ion-icon (click)="menosProd()" id="baixo" slot="end" name="arrow-down" style="padding-right: 50px;cursor: pointer;"></ion-icon>
+    
+    <ion-chip (click)="altQtd()" color="primary">
+      salvar
+      <ion-icon name="checkmark" color="tertiary"></ion-icon>
+    </ion-chip>
+  </ion-list>
+  <ion-item>
+    <ion-label [ngClass]="{ 'centrar': grande }">Favorito</ion-label>
+    <ion-checkbox (click)="mudaFavorito()" [ngClass]="{ 'espacoDireita': grande }" [(ngModel)]="prodFavorito"></ion-checkbox>
+  </ion-item>
+</ion-content>

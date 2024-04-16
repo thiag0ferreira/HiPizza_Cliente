@@ -1,0 +1,23 @@
+.gdegrad {
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(19,53,116,0.3867121848739496) 0%, rgba(0,1,255,0.1679446778711485) 100%);
+}
+
+.fnd2 {
+    background: url(../../assets/pizza.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    color: white;
+}
+
+.fnd {
+    background: url(../../assets/bgpizza_m.jpg) repeat fixed;
+    height: 100%;
+    color: white;
+}
+
+.cantinhos { width: 100%; *width: 729px; background: #fff; border: 1px solid #c8c8c8; margin-bottom: 20px;
+	padding: 15px 30px 0 30px;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+	        border-radius: 6px;
+}

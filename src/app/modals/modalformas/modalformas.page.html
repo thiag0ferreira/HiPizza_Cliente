@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pedido {{stab.fantasia}}</ion-title>
+    <ion-button (click)="closeModal()" slot="end" fill="clear" shape="round">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+  <b><span style="padding-left: 10px;">Forma de Pagamento</span></b>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let f of formas;">
+    <ion-label>{{f.nome}}</ion-label>
+    <ion-checkbox [(ngModel)]="f.marcado" (click)="marcar(f.id)">marcar</ion-checkbox>
+  </ion-item>
+</ion-content>

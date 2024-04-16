@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Confirmação de E-mail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <span class="ion-hide-md-up">
+      <ion-label>Um token de confirmação foi enviado<br> para seu e-mail</ion-label>
+    </span>
+    <span class="ion-hide-sm-down" style="padding-left: 30%; padding-right: 30%;">
+      <ion-label>Um token de confirmação foi enviado para seu e-mail</ion-label>
+    </span>
+  </ion-item>
+  <ion-item>
+    <span class="ion-hide-md-up">
+      <ion-label>{{user.email}}</ion-label>
+    </span>
+    <span class="ion-hide-sm-down" style="padding-left: 30%; padding-right: 30%;">
+      <ion-label>{{user.email}}</ion-label>
+    </span>
+  </ion-item>
+  <ion-item>
+    <ion-label>&nbsp;</ion-label>
+  </ion-item>
+  <ion-item>
+    <span class="ion-hide-md-up">
+      <ion-label>Informe o token recebido</ion-label>
+    </span>
+    <span class="ion-hide-sm-down" style="padding-left: 30%; padding-right: 30%;">
+      <ion-label>Informe o token recebido</ion-label>
+    </span>
+  </ion-item>
+  <ion-item>
+    <span class="ion-hide-md-up">
+      <ion-input [(ngModel)] = "tToken" type="text" placeholder="Digite aqui o Token recebido"></ion-input>
+    </span>
+    <span class="ion-hide-sm-down" style="padding-left: 30%; padding-right: 30%;">
+      <ion-input [(ngModel)] = "tToken" type="text" placeholder="Digite aqui o Token recebido"></ion-input>
+    </span>
+  </ion-item>
+  <ion-item>
+    <div style="width: 100%; text-align: center;">
+      <ion-button (click)="checaToken()" color="tertiary" shape="round">
+        Validar
+      </ion-button>
+    </div>
+  </ion-item>
+  <ion-item>
+    <div style="width: 100%; text-align: center;">
+      <ion-button (click)="reEnvioToken()" color="medium" shape="round">
+        Enviar novamente
+      </ion-button>
+    </div>
+  </ion-item>
+  <ion-item-divider>
+    <div style="width: 100%; text-align: center;">
+      <ion-button (click)="remarcaEmail()" color="danger" shape="round">
+        Não é meu E-mail
+      </ion-button>
+    </div>
+  </ion-item-divider>
+
+</ion-content>

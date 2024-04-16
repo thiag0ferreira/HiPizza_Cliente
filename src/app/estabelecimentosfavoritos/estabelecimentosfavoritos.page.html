@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Estabelecimentos Favoritos</ion-title>
+    <ion-chip color="primary" slot="end" (click)="goTodos()">
+      <ion-label>Todos</ion-label>
+      <ion-icon name="apps-outline" color="tertiary"></ion-icon>
+    </ion-chip>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor = "let s of stbs">
+    <ion-item (click)="verStab(s.st.id)" style="cursor: pointer;">
+      <ion-label [ngClass]="{ 'centrar': grande }">
+        <h2>{{s.st.fantasia}} - {{s.st.razaoSocial}} - {{s.ed.nPeds}} pedidos</h2>
+        <h4>({{s.st.ddd}}) {{s.st.fone}}</h4>
+        <p>{{s.st.website}}</p> {{s.ed.logradouro}}, {{s.ed.numero}} {{s.ed.bairro}} {{s.ed.cidade}}-{{s.ed.estado}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

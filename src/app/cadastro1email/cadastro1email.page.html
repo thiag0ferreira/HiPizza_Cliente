@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>HiPizza - Cadastro Inicial</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="background-color: #228b22;">
+  <div class="home-background ion-text-center item-verde">
+    <br>
+    <img src="assets/HiPizzaLogo.png">
+    <br>
+    <br>
+    <ion-list id="iLista" lines="full" class="ion-no-margin ion-no-padding home-background" style="padding-left: 25%;padding-right: 25%;">
+      <ion-item>
+        <ion-label position="stacked">Nome e Sobrenome</ion-label>
+        <ion-input [(ngModel)] = "tNome" id="tNome" required type="text" ></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="stacked">E-mail</ion-label>
+        <ion-input [(ngModel)] = "tEmail" required type="text" ></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="stacked">Login</ion-label>
+        <ion-input [(ngModel)] = "tLogin" required type="text" ></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="stacked">Senha</ion-label>
+        <ion-input [(ngModel)] = "tSenha" required type="password" ></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="stacked">Celular</ion-label>
+        <ion-input [(ngModel)] = "tCelular" id="tCelular" required type="text" (ionInput)="formata('tCelular','2')"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <div style="width: 100%; text-align: center;">
+          <ion-button (click)="processaCadastro()" color="success" shape="round">
+            Cadastrar
+          </ion-button>
+        </div>
+        <br>
+      </ion-item>
+  
+      <ion-item>
+        <div style="width: 100%; text-align: center;">
+          <ion-button (click)="goHome()" color="danger" shape="round">
+            Retornar
+          </ion-button>
+        </div>
+      </ion-item>
+      
+    </ion-list>
+  </div>
+</ion-content>

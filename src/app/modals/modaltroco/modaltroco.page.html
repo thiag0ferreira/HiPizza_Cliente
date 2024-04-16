@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Troco para pagamento em dinheiro</ion-title>
+    <ion-button (click)="closeModal()" slot="end" fill="clear" shape="round">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-chip color="primary">
+        <ion-label class="fixedLabel">Por favor providencie troco para R$</ion-label>
+        <ion-input [(ngModel)]="obsTroco" type="text" size="9" maxlength="9" placeholder="valor"></ion-input>
+          <span (click)="gravaObsTroco()" style="cursor: pointer;">Alterar</span>
+        <ion-icon (click)="gravaObsTroco()" style="cursor: pointer;" name="checkmark" color="tertiary"></ion-icon>
+      </ion-chip>
+    </ion-item>
+  </ion-list>
+</ion-content>

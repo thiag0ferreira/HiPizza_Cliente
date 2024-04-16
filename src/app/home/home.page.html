@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Hi-Pizza
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="container" class="home-background ion-text-center">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img src="assets/HiPizzaLogo.png">
+    <br>
+    <br>
+    <ion-button color="light">Bem-vindo ao seu aplicativo de pizzas</ion-button>
+    <br>
+    <br>
+    <ion-button color="light">Vemos que você ainda não se cadastrou</ion-button>
+    <br>
+    <ion-button color="light">Gostaria de se cadastrar agora ?</ion-button>
+    <br>
+    <br>
+    <div style="width: 100%; text-align: center;">
+      <ion-button (click)="cadastrar()" color="success" shape="round">
+        Sim, quero me cadastrar
+      </ion-button>
+    </div>
+    <br>
+    <div style="width: 100%; text-align: center;">
+      <ion-button (click)="cadastraDepois()" color="danger" shape="round">
+        Não, vou me cadastrar depois
+      </ion-button>
+    </div>
+
+    <br>
+    <div style="width: 100%; text-align: center;">
+      <ion-button (click)="getMeusDados()" color="warning" shape="round">
+        Recuperar meu cadastro
+      </ion-button>
+    </div>
+
+    <br>
+    <div style="width: 100%; text-align: center;">
+      <ion-button (click)="mudaServ()" color="dark" shape="round">
+        {{serv}}
+      </ion-button>
+    </div>
+
+    <br>
+    <div style="width: 100%; text-align: center;">
+      <ion-button (click)="removeDados()" color="warning" shape="round">
+        Remover dados aplicativo
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

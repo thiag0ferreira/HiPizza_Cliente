@@ -1,0 +1,2 @@
+Colocar refresh ao acrescentar produto, mostrar no carrinho quando volta.
+Ao colocar o pedido, alterar a data para este momento.

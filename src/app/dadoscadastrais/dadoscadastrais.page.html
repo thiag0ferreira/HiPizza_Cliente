@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Meus Dados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="padding-left: 10%; padding-right: 10%; height: 100%;" class="fnd">
+  <div class="fnd" style="height: 100%;">
+    <ion-list id="il1" style="margin-left: 5%; margin-right: 5%;" class="fnd">
+      <div class="cantinhos" style="padding-bottom: 10px;">
+        <ion-label id="lNo" style="display: inline-block; width: 10%;"><b>Nome: </b></ion-label>
+        <ion-label id="tNo" style="display: inline-block; width: 20%; cursor: pointer;" (click)="altera('tNo')">[ {{nome}} ]</ion-label>
+        <ion-label id="lAp" style="display: inline-block; width: 10%;"><b>Apelido: </b></ion-label>
+        <ion-label id="tAp" style="display: inline-block; width: 20%; cursor: pointer;" (click)="altera('tAp')">[ {{apelido}} ]</ion-label>
+        <ion-label id="lEm" style="display: inline-block; width: 10%;"><b>E-mail: </b></ion-label>
+        <ion-label id="tEm" style="display: inline-block; width: 30%; cursor: pointer;" (click)="altera('tEm')">[ {{email}} ]</ion-label>
+    
+        <br>
+        <ion-label id="lFo" style="display: inline-block; width: 10%;"><b>Fone: </b></ion-label>
+        <ion-label id="tFo" style="display: inline-block; width: 20%; cursor: pointer;" (click)="altera('tFo')">[ {{celular}} ]</ion-label>
+        <ion-label id="lSe" style="display: inline-block; width: 10%;"><b>Sexo: </b></ion-label>
+        <ion-label id="tSe" style="display: inline-block; width: 20%; cursor: pointer;" (click)="altera('tSe')">[ {{sexo}} ]</ion-label>
+        <ion-label id="lOb" style="display: inline-block; width: 10%;"><b>Obs: </b></ion-label>
+        <ion-label id="tOb" style="display: inline-block; width: 30%; cursor: pointer;" (click)="altera('tOb')">[ {{obs}} ]{{acertar()}}</ion-label>
+        <br>
+      </div>
+  
+    </ion-list>
+    <hr>
+    <div style="width: 100%; text-align: center; opacity: .8;">
+      <b>Endereço</b>
+    </div>
+    <ion-list style="margin-left: 5%; margin-right: 5%;" class="fnd">
+      <div style="background-color: gray; opacity: .8;">
+        <ion-label [ngStyle]="c1Style()"><B>CEP</B></ion-label>
+        <ion-label (click)="abreCep()" [ngStyle]="c2Style()">[ {{cep}} ]</ion-label>
+        <ion-label [ngStyle]="c1Style()"><B class="ion-hide-sm-down">Logradouro</B><B class="ion-hide-md-up">Logr</B></ion-label>
+        <ion-label [ngStyle]="c3Style()"><span style="cursor: pointer;" (click)="edCep('Lo')">[ {{logradouro}} ]</span>, Nº <span style="cursor: pointer;" (click)="edCep('No')">[ {{numero}} ]</span></ion-label>
+        <ion-label [ngStyle]="c1Style()"><B class="ion-hide-sm-down">Complemento</B><B class="ion-hide-md-up">Compl.</B></ion-label>
+        <ion-label [ngStyle]="c4Style()" style="cursor: pointer;" (click)="edCep('Co')">[ {{complemento}} ]</ion-label>
+        <ion-label [ngStyle]="c1Style()"><B>Bairro</B></ion-label>
+        <ion-label [ngStyle]="c2Style()" style="cursor: pointer;" (click)="edCep('Ba')">[ {{bairro}} ]</ion-label>
+        <ion-label [ngStyle]="c1Style()"><B>Cidade</B></ion-label>
+        <ion-label [ngStyle]="c2Style()" style="cursor: pointer;" (click)="edCep('Ci')">[ {{cidade}} ]</ion-label>
+        <ion-label [ngStyle]="c1Style()"><B>Estado</B></ion-label>
+        <ion-label [ngStyle]="c2Style()" style="cursor: pointer;" (click)="edCep('Es')">[ {{estado}} ]</ion-label>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>
